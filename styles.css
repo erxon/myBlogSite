@@ -6,6 +6,16 @@
 	margin-right: 0.75rem;
 	margin-left: 0.75rem;
 }
+/* articles section */
+.article{
+	padding: 1rem 2.75rem;
+}
+.article-title{
+	margin-bottom: 1rem;
+}
+.article-body{
+	margin-bottom: 1.5rem;
+}
 /* footer section */
 .footer-padding {
 	padding-bottom: 60px;
