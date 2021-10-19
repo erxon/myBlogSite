@@ -1,3 +1,12 @@
+/* navbar section */
+.navbar{
+	padding: 1rem 2rem;
+}
+.nav-item{
+	margin-right: 0.75rem;
+	margin-left: 0.75rem;
+}
+/* footer section */
 .footer-padding {
 	padding-bottom: 60px;
 }
