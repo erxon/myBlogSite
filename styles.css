@@ -16,6 +16,13 @@
 .article-body{
 	margin-bottom: 1.5rem;
 }
+/* contact-me section */
+.contact-me{
+	padding: 1rem 2.75rem;
+}
+.contact-me h1{
+	margin-bottom: 1rem;
+}
 /* footer section */
 .footer-padding {
 	padding-bottom: 60px;
