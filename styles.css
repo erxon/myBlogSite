@@ -1,7 +1,6 @@
 /* navbar section */
 .navbar{
 	padding: 1rem 2rem;
-	background-color: #C56824;
 }
 .nav-item{
 	margin-right: 0.75rem;
@@ -31,7 +30,6 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	background-color: red;
 	color: white;
 	text-align: center;
 }
