@@ -30,6 +30,48 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	color: white;
+	text-align: center;
+}
+.icon{
+	margin: 0 5px;
+}
+.icon{
+	color: grey;
+}
+/* sign-in section */
+.heading{
+	text-align: center;
+}
+.social-buttons{
+	text-align: center;
+	padding: 10px;
+}
+.sign-in-form{
+	padding:7% 10%;
+}
+.form-signin {
+	width: 100%;
+	max-width: 330px;
+	padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.sign-in-form p{
 	text-align: center;
 }
