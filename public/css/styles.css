@@ -1,6 +1,6 @@
 /* navbar section */
 .navbar{
-	padding: 1rem 2rem;
+	padding: 1rem 4rem;
 }
 .nav-item{
 	margin-right: 0.75rem;
@@ -8,7 +8,10 @@
 }
 /* articles section */
 .article{
-	padding: 1rem 2.75rem;
+	background-color: #222831;
+	color: #fff;
+	margin-bottom: 30px;
+	padding: 1rem 4rem;
 }
 .article-title{
 	margin-bottom: 1rem;
@@ -17,34 +20,38 @@
 	margin-bottom: 1.5rem;
 }
 /* contact-us and about-us section */
-.contact-us, .about-us{
-	padding: 1rem 2.75rem;
+.contact, .about{
+	margin-top: 30px;
+	padding: 1rem 4rem;
 }
-.contact-us h1, .about-us h1{
+.contact h1, .about h1{
 	margin-bottom: 1rem;
 }
 
 /* footer section */
 .footer{
+	background-color: #393E46;
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	width: 100%;
 	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #EEEEEE;
 }
 .icon{
 	margin: 0 5px;
 }
+.icon:hover{
+	color: #00ADB5;
+}
 .icon{
-	color: grey;
+	color: #EEEEEE;
 }
 /* sign-in section */
 .heading{
 	text-align: center;
-}
-.social-buttons{
-	text-align: center;
-	padding: 10px;
 }
 .sign-in-form{
 	padding:7% 10%;

@@ -1,30 +1,18 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Eton</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-          </ul>
-        </div>
+<%- include("partials/heading.ejs") -%>
+    <!-- articles -->
+    <div class="article">
+      <div class="article-title">
+        <h1>Welcome</h1>
       </div>
-    </nav>
-  </body>
-</html>
+      <div class="article-body">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non orci sit amet nulla euismod vulputate.
+          Proin nulla purus, lobortis eu tellus quis, ornare gravida ligula. Aenean vel accumsan nulla.
+          In hac habitasse platea dictumst. Mauris accumsan, est ut viverra gravida, felis ante varius ipsum, ut rhoncus nulla purus et velit.
+          Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc luctus dapibus tellus, eu tristique enim varius sit amet.
+        </p>
+      </div>
+      <button type="button" name="button" class="btn" style="background-color: #00ADB5; color: #fff">Read more</button>
+    </div>
+
+<%- include("partials/footer.ejs") -%>
