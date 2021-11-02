@@ -1,0 +1,17 @@
+<%- include("partials/heading.ejs") -%>
+<div class="compose-form">
+  <form action="/compose" method="post">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" name="title" class="form-control" id="title" placeholder="Title">
+    </div>
+    <div class="mb-3">
+      <label for="content" class="form-label">Content</label>
+      <textarea class="form-control" name="content" id="content" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn" style="background-color: #00ADB5; color: #fff">Submit</button>
+  </form>
+</div>
+
+
+<%- include("partials/footer.ejs") -%>

@@ -10,13 +10,16 @@ app.use(express.static("public"));
 
 //mongoose
 mongoose.connect("mongodb://localhost:27017/etonDB");
-
-const adminSchema = new mongoose.Schema({
-  email: String,
-  password: String
+const articleSchema = new mongoose.Schema({
+  title: String,
+  content: String
 });
 
-const Admin = new mongoose.model(adminSchema);
+const Admin = mongoose.model('Admin',
+               new mongoose.Schema({ email: String, password: String}),
+               'admin');
+
+const Article = new mongoose.model("Article", articleSchema);
 
 app.get("/", function(req, res){
   res.render("home");
@@ -38,10 +41,39 @@ app.get("/admin", function(req, res){
   res.render("admin");
 });
 
+app.get("/compose", function(req, res){
+  res.render("compose");
+});
+
 app.post("/admin", function(req, res){
   const email = req.body.email;
   const password = req.body.password;
 
+  Admin.findOne({email: email}, function(err, foundData){
+    if(err){
+      console.log(err);
+    } else{
+      if(password === foundData.password){
+        res.redirect("/compose");
+      }
+    }
+  });
+});
+
+app.post("/compose", function(req, res){
+  const title = req.body.title;
+  const content = req.body.content;
+
+  const newArticle = new Article({
+    title: title,
+    content: content
+  });
+
+  newArticle.save(function(err){
+    if(!err){
+      console.log("successfully saved");
+    }
+  });
 });
 
 app.listen(3000, function(){

@@ -82,3 +82,7 @@
 .sign-in-form p{
 	text-align: center;
 }
+/* compose */
+.compose-form{
+	padding: 1rem 4rem;
+}
