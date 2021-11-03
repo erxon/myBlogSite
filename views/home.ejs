@@ -1,10 +1,10 @@
 <%- include("partials/heading.ejs") -%>
-    <!-- articles -->
-    <div class="article">
-      <div class="article-title">
+
+    <div class="welcome">
+      <div class="welcome-heading">
         <h1>Welcome</h1>
       </div>
-      <div class="article-body">
+      <div class="welcome-body">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non orci sit amet nulla euismod vulputate.
           Proin nulla purus, lobortis eu tellus quis, ornare gravida ligula. Aenean vel accumsan nulla.
@@ -14,5 +14,19 @@
       </div>
       <button type="button" name="button" class="btn" style="background-color: #00ADB5; color: #fff">Read more</button>
     </div>
+    <!-- articles -->
+    <% articles.forEach(function(article){ %>
+      <form action="/article/<%= article.id %>" method="post">
+        <div class="article">
+          <div class="article-title">
+            <h1><%= article.title %></h1>
+          </div>
+          <div class="article-body">
+            <p><%= article.content %></p>
+          </div>
+          <button type="submit" class="btn" style="background-color: #00ADB5; color: #fff">Read more</button>
+        </div>
+      </form>
+    <% }); %>
 
 <%- include("partials/footer.ejs") -%>

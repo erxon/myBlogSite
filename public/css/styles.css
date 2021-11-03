@@ -6,10 +6,22 @@
 	margin-right: 0.75rem;
 	margin-left: 0.75rem;
 }
-/* articles section */
-.article{
+/* welcome section */
+.welcome{
 	background-color: #222831;
 	color: #fff;
+	margin-bottom: 30px;
+	padding: 1rem 4rem;
+}
+.welcome-heading{
+	margin-bottom: 1rem;
+}
+.welcome-body{
+	margin-bottom: 1.5rem;
+}
+/* articles section */
+
+.article{
 	margin-bottom: 30px;
 	padding: 1rem 4rem;
 }
@@ -19,6 +31,7 @@
 .article-body{
 	margin-bottom: 1.5rem;
 }
+
 /* contact-us and about-us section */
 .contact, .about{
 	margin-top: 30px;

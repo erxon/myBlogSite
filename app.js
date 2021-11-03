@@ -22,11 +22,10 @@ const Admin = mongoose.model('Admin',
 const Article = new mongoose.model("Article", articleSchema);
 
 app.get("/", function(req, res){
-  res.render("home");
-});
+  Article.find(function(err, foundArticles){
+    res.render("home", {articles: foundArticles});
+  });
 
-app.get("/home", function(req, res){
-  res.render("home");
 });
 
 app.get("/contact", function(req, res){
@@ -43,6 +42,10 @@ app.get("/admin", function(req, res){
 
 app.get("/compose", function(req, res){
   res.render("compose");
+});
+
+app.get("/article/:articleId", function(req, res){
+  res.render("article");
 });
 
 app.post("/admin", function(req, res){
@@ -71,8 +74,14 @@ app.post("/compose", function(req, res){
 
   newArticle.save(function(err){
     if(!err){
-      console.log("successfully saved");
+      res.redirect("/");
     }
+  });
+});
+
+app.post("/:articleId", function(req, res){
+  Article.findById(req.params.articleId, function(err, foundArticle){
+    res.redirect("/article/"+req.params.articleId);
   });
 });
 
