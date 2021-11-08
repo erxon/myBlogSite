@@ -44,7 +44,7 @@ app.get("/admin", function(req, res){
 });
 
 app.get("/compose", function(req, res){
-  res.render("compose");
+  res.redirect("/admin");
 });
 
 app.get("/article/:articleId", function(req, res){
@@ -68,7 +68,7 @@ app.post("/admin", function(req, res){
           res.redirect("/admin");
         } else{
           if(req.body.password === foundData.password){
-            res.redirect("/compose");
+            res.render("compose");
           }
         }
       }
