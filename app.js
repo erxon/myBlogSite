@@ -60,19 +60,20 @@ app.get("/article/:articleId", function(req, res){
 });
 
 app.post("/admin", function(req, res){
-  const email = req.body.email;
-  const password = req.body.password;
-
-  Admin.findOne({email: email}, function(err, foundData){
-    if(err){
-      console.log(err);
-    } else{
-      if(password === foundData.password){
-        res.redirect("/compose");
+    Admin.findOne({email: req.body.email}, function(err, foundData){
+      if(err){
+        res.redirect("/admin");
+      } else{
+        if(req.body.password === ""){
+          res.redirect("/admin");
+        } else{
+          if(req.body.password === foundData.password){
+            res.redirect("/compose");
+          }
+        }
       }
-    }
+    });
   });
-});
 
 app.post("/compose", function(req, res){
   const title = req.body.title;
