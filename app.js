@@ -1,12 +1,16 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const ejs = require("ejs");
+
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: true}));
 
 app.set("view engine", "ejs");
+
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
+
 
 //mongoose
 mongoose.connect("mongodb://localhost:27017/etonDB");
@@ -25,7 +29,6 @@ app.get("/", function(req, res){
   Article.find(function(err, foundArticles){
     res.render("home", {articles: foundArticles});
   });
-
 });
 
 app.get("/contact", function(req, res){
@@ -45,7 +48,15 @@ app.get("/compose", function(req, res){
 });
 
 app.get("/article/:articleId", function(req, res){
-  res.render("article");
+  Article.findOne({_id: req.params.articleId}, function(err, foundArticle){
+    if(!err){
+      res.render("article", {
+        title: foundArticle.title,
+        content: foundArticle.content
+      });
+    }
+  });
+
 });
 
 app.post("/admin", function(req, res){
@@ -79,10 +90,8 @@ app.post("/compose", function(req, res){
   });
 });
 
-app.post("/:articleId", function(req, res){
-  Article.findById(req.params.articleId, function(err, foundArticle){
-    res.redirect("/article/"+req.params.articleId);
-  });
+app.post("/article/:articleId", function(req, res){
+  res.redirect("/article/"+req.params.articleId);
 });
 
 app.listen(3000, function(){

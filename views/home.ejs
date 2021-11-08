@@ -1,32 +1,32 @@
-<%- include("partials/heading.ejs") -%>
+<%- include("partials/heading") %>
 
     <div class="welcome">
       <div class="welcome-heading">
         <h1>Welcome</h1>
       </div>
       <div class="welcome-body">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non orci sit amet nulla euismod vulputate.
-          Proin nulla purus, lobortis eu tellus quis, ornare gravida ligula. Aenean vel accumsan nulla.
-          In hac habitasse platea dictumst. Mauris accumsan, est ut viverra gravida, felis ante varius ipsum, ut rhoncus nulla purus et velit.
-          Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc luctus dapibus tellus, eu tristique enim varius sit amet.
-        </p>
+        <h3>
+          Hello there! I'm Ericson Castasus and this is my blog site.<br>
+          Here, I will post informative articles about web development and programming
+          including my experiences while working on it.
+        </h3>
       </div>
-      <button type="button" name="button" class="btn" style="background-color: #00ADB5; color: #fff">Read more</button>
     </div>
     <!-- articles -->
-    <% articles.forEach(function(article){ %>
-      <form action="/article/<%= article.id %>" method="post">
-        <div class="article">
-          <div class="article-title">
-            <h1><%= article.title %></h1>
+    <div class="article">
+      <% articles.forEach(function(article){ %>
+        <form action="/article/<%= article.id %>" method="post">
+          <div class="headline">
+            <div class="article-title">
+              <h1><%= article.title %></h1>
+            </div>
+            <div class="article-body">
+              <p><%= article.content %></p>
+            </div>
+            <button type="submit" class="btn" style="background-color: #00ADB5; color: #fff">Read more</button>
           </div>
-          <div class="article-body">
-            <p><%= article.content %></p>
-          </div>
-          <button type="submit" class="btn" style="background-color: #00ADB5; color: #fff">Read more</button>
-        </div>
-      </form>
-    <% }); %>
+        </form>
+      <% }); %>
+    </div>
 
-<%- include("partials/footer.ejs") -%>
+<%- include("partials/footer") %>

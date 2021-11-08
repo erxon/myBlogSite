@@ -1,11 +1,25 @@
+
+body {
+	padding:0;
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+}
+h1{
+	font-size: 45px;
+}
+p{
+	font-size: 18px;
+}
+/**************************************************************/
 /* navbar section */
 .navbar{
-	padding: 1rem 4rem;
+	padding: 1rem 3.5rem;
 }
 .nav-item{
 	margin-right: 0.75rem;
 	margin-left: 0.75rem;
 }
+/**************************************************************/
 /* welcome section */
 .welcome{
 	background-color: #222831;
@@ -19,9 +33,12 @@
 .welcome-body{
 	margin-bottom: 1.5rem;
 }
-/* articles section */
-
-.article{
+/**************************************************************/
+/*
+articles section in home.ejs
+displays articles in blocks in the home page
+*/
+.headline{
 	margin-bottom: 30px;
 	padding: 1rem 4rem;
 }
@@ -31,7 +48,26 @@
 .article-body{
 	margin-bottom: 1.5rem;
 }
+/**************************************************************/
+/*
+main article section
 
+These are the styling that are applied to the designated
+page for the article
+
+*/
+
+.main-article{
+	padding: 1rem 5rem;
+}
+.main-article-title h1{
+	font-size: 3rem;
+}
+.main-article-body{
+	margin-top: 50px;
+}
+
+/**************************************************************/
 /* contact-us and about-us section */
 .contact, .about{
 	margin-top: 30px;
@@ -41,27 +77,22 @@
 	margin-bottom: 1rem;
 }
 
-/* footer section */
-.footer{
-	background-color: #393E46;
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	text-align: center;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	color: #EEEEEE;
-}
+/* .footer {
+	position: ;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #393E46;
+  color: #EEEEEE;
+  text-align: center;
+} */
 .icon{
 	margin: 0 5px;
 }
 .icon:hover{
 	color: #00ADB5;
 }
-.icon{
-	color: #EEEEEE;
-}
+/**************************************************************/
 /* sign-in section */
 .heading{
 	text-align: center;
@@ -95,6 +126,7 @@
 .sign-in-form p{
 	text-align: center;
 }
+/**************************************************************/
 /* compose */
 .compose-form{
 	padding: 1rem 4rem;
